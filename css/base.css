@@ -1,0 +1,121 @@
+/*导航栏等多个页面共有的样式*/
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+img{
+	vertical-align: middle;
+}
+body{
+	font-family: 'Arial Normal', 'Arial';
+	font-size: 16px;
+	font-weight: normal;
+	width: 100%;
+	height: auto;
+	background-color: #F6F6F6;
+}
+ul,li{
+	list-style: none;
+}
+div{
+	display: block;
+}
+#container{
+	width:80%;
+	margin: 20px 10% 20px 10% ;
+	/*此处的背景需要自适应*/
+	height: auto;
+	background-color: #ffffff;
+	position: absolute;
+}
+/*header部分*/
+#header{
+	width: 25%;
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.logo h2{
+	/*margin-top: 20px;*/
+	width: 240px;
+	font-size: 18px;
+	line-height: 80px;
+	text-align: center;
+	/*边框颜色需要修改*/
+	border: #FE6400 2px solid;
+	border-radius: 5px;
+	box-shadow: 5px 5px 3px #888888;
+	color: #555555;
+}
+.logo h2 em{
+	font-size: 22px;
+	font-family: "Comic Sans MS";
+}
+.logo h2 span{
+	color: #FF8A3C;
+}
+.menu{
+	margin-top: 20px;
+}
+.menu li{
+	text-align: center;
+	width: 240px;
+	border: 1px solid #666666;
+	background-color: #F9F9F9;
+	border-radius: 5px;
+}
+.menu li a{
+	color: #555555;
+}
+.menu li a:hover{
+	color:  #FF8A3C;
+}
+.menu .l_menu{
+	background: url(../img/menu.png);
+	line-height: 30px;
+	color: #ffffff;
+	cursor: pointer;
+	border-radius: 5px;
+	/*暂时改为可见*/
+	display: block;
+	text-align: center;
+}
+.menu .l_menu:hover{
+	color: #FF8A3C;
+}
+
+/*右边一小部分*/
+#content{
+	width: 70%;
+	margin-top: 20px;
+	margin-left: 10px;
+	float: left;
+	position: relative;
+}
+#top{
+	line-height: 40px;
+	/*width: 720px;*/
+	width: 100%;
+	text-align: center;
+	border: #FE6400 2px solid;
+	border-radius: 5px;
+}
+#main{
+	margin-top: 20px;
+	min-height: 530px;
+	height: auto;
+	border: #FE6400 1px solid;
+	/*新添的样式*/
+	margin-bottom: 20px;
+}
+.sub{
+	margin-top: 20px;
+	margin-left: 20px;
+	font-size: 14px;
+}
+.sub a{
+	color: #888888;
+}

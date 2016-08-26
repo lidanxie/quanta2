@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Quanta（量子）信息服务中心后台管理系统--banner编辑页面</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/banner2.css">
+	<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
+	<script type="text/javascript" src="js/checkForm.js"></script>
+</head>
+<body>
+	<div id="container">
+		<!-- header部分需要修改的 -->
+		<div id="header">
+			<div class="logo"><h2>欢迎您，<em><span>Q</span>uan<span>t</span>a</em>&nbsp;&nbsp;!</h2></div>
+			<!-- 需要添加链接 -->
+			<ul class="menu">
+				<li class="l_menu">首页管理</li>
+				<ul>
+					<li><a href="index.html">bannner管理</a></li>
+				    <li><a href="contacts.html">联系人管理</a></li>
+				</ul>
+				
+				    
+				<li class="l_menu">动态管理</li>
+				<ul>
+					<li><a href="dynamic.html">动态列表</a></li>
+				    <li><a href="dynamic_draft_box.html">草稿箱</a></li>
+				</ul>
+				
+
+				<li class="l_menu">项目中心</li>
+				<ul>
+					<li><a href="project_list.html">项目列表</a></li>
+				    <li><a href="project_draft_box.html">草稿箱</a></li>
+				</ul>
+				
+				
+				<li class="l_menu">管理层管理</li>
+				<ul>
+					<li><a href="manage_list.html">查看/修改</a></li>
+				    <li><a href="add_img.html">新增</a></li>
+				</ul>
+				
+			</ul>
+		</div>
+		<div id="content">
+			<div id="top">
+				<p>欢迎使用 Quanta（量子）信息技术服务中心后台管理系统</p>
+			</div>
+			<div id="main">
+				<div class="sub">
+					<a href="index.html">后台管理&nbsp;</a>
+					<a href="index.html">|&nbsp;banner管理</a>
+				</div>
+				<div class="back">
+					<a href="index.html">返回</a>
+				</div>
+				<!-- 表单提交地址？通过Ajax验证 -->
+				<form method="post" action="">   
+					<div class="item"><p>标题：</p>
+						<input type="text" class="til required">
+						<span class="tips">不能为空</span>
+					</div>
+					<div class="item">
+						<p>上传照片：</p>
+						<a href="javascript:;" class="banner_upload">本地上传
+							<input type="file">
+						</a>
+					</div>
+					<div class="item">
+						<p>添加链接：</p>
+						<input type="text" class="url required">
+						<span class="tips">不能为空</span>
+					</div>
+					<div class="space" style="height:30px"></div>
+					<div class="item">
+						<p>备注：</p>
+						<textarea name="text" onpropertychange="if(this.scrollHeight>80) this.style.posHeight=this.scrollHeight+5"></textarea>
+					</div>
+					<div class="item">
+						<input type="submit" value="保存" class="save">
+						<input type="reset" value="取消" class="rest">
+					</div>
+					<div class="space" style="height:20px"></div>
+				</form>
+			</div>
+			<div class="space" style="height:20px"></div>
+		</div>
+	</div>
+	<!-- <div id="footer">
+			<ul id="contact">
+				<li>友情链接</li>
+                <li><a href="http://www.gdufs.edu.cn">广东外语外贸大学</a></li>
+                <li><a href="http://www.quantacenter.com">quanta首页</a></li>
+                <li><a href="http://csi.gdufs.edu.cn/">思科信息学院</a></li>
+                <li>Copyright&nbsp;&copy2016&nbsp;All&nbsp;rights&nbsp;reserved</li>
+            </ul>
+	</div> -->
+
+</body>
+</html>

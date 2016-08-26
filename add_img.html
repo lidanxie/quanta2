@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Quanta（量子）信息服务中心后台管理系统--上传照片页</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/add_img.css">
+	<style type="text/css">
+	    .img_btn{
+	    width: 100%;
+        }
+        .box{
+	        height: 200px;
+	        width: 100%;
+        }
+        .upload{
+	        width: 260px;
+	        line-height: 80px;
+	        background-color: #0099FF;
+	        text-align: center;
+	        position: absolute;
+	        margin-top: 100px;
+	        margin-left: 250px;
+        }
+        .upload a{
+	        font-size: 28px;
+	        color: #ffffff;
+        }
+        .upload input{
+	        position: absolute;
+	        top: 0;
+	        left: 0;
+	        width: 260px;
+	        height: 80px;
+	        filter:alpha(opacity=0);   
+              -moz-opacity:0;   
+              -khtml-opacity: 0;   
+              opacity: 0;
+            text-align: center;
+        }
+        .ctrl p{
+	        text-align: center;
+        }
+    </style>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<div class="logo"><h2>欢迎您，<em><span>Q</span>uan<span>t</span>a</em>&nbsp;&nbsp;!</h2></div>
+			<!-- 需要添加链接 -->
+			<ul class="menu">
+				<li class="l_menu">首页管理</li>
+				<ul>
+					<li><a href="index.html">bannner管理</a></li>
+				    <li><a href="contacts.html">联系人管理</a></li>
+				</ul>
+				
+				    
+				<li class="l_menu">动态管理</li>
+				<ul>
+					<li><a href="dynamic.html">动态列表</a></li>
+				    <li><a href="dynamic_draft_box.html">草稿箱</a></li>
+				</ul>
+				
+
+				<li class="l_menu">项目中心</li>
+				<ul>
+					<li><a href="project_list.html">项目列表</a></li>
+				    <li><a href="project_draft_box.html">草稿箱</a></li>
+				</ul>
+				
+				
+				<li class="l_menu">管理层管理</li>
+				<ul>
+					<li><a href="manage_list.html">查看/修改</a></li>
+				    <li><a href="add_img.html">新增</a></li>
+				</ul>
+				
+			</ul>
+		</div>
+	     <div id="content">
+	    	<div id="top">
+				<p>欢迎使用 Quanta（量子）信息技术服务中心后台管理系统</p>
+			</div>
+			<div id="main">
+				<div class="sub">
+					<a href="index.html">后台管理&nbsp;</a>
+					<a href="manage_list.html">|&nbsp;管理层更新</a>
+				</div>
+				<div class="img_addr">
+					<p>上传到：</p>
+					<select class="period">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="新增">新增</option>
+						<option selected>请选择</option>
+					</select>
+					<p>届</p>
+					<select class="department">
+						<option>核心管理层</option>
+						<option>运营部</option>
+						<option>设计部</option>
+						<option>研发部</option>
+						<option selected>请选择</option>
+					</select>
+				</div>
+
+				<div class="img_btn">
+					<!-- 可按住ctrl:通过jq添加input -->
+					<div class="box">
+						<div class="upload">
+						    <a href="javascript:;" class="img_upload">本地上传
+							    <input type="file">
+						    </a>
+					    </div>
+					</div>
+					<div class="ctrl">
+						<p>按Ctrl可以多选</p>
+					</div>
+					
+				</div>
+
+			</div>
+	    </div>
+	</div>
+</body>
+</html>

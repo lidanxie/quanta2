@@ -1,0 +1,48 @@
+.item{
+	line-height: 50px;
+	margin-top: 10px;
+}
+.item label{
+	display: block;
+	width: 250px;
+	text-align: right;
+	float: left;
+}
+.item input{
+	width: 330px;
+	height: 30px;
+	margin-left: 40px;
+	border: #FE6400 1px solid; 
+}
+.high{
+	color: red;
+}
+.save,.reset{
+	width: 100px;
+	height: 40px;
+	background-color: #FE6400;
+	color: #ffffff;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.save{
+	margin-left: 200px;
+}
+.reset{
+	margin-left: 100px;
+}
+.save:hover,.reset:hover{
+	background-color: #FE9400;
+}
+.formtips{
+	width: 22px;
+	height: 22px;
+}
+.onError{
+    background:#FFE0E9 url(../img/reg3.gif) no-repeat 0 center;
+	padding-left:25px;
+}
+.onSuccess{
+    background:#E9FBEB url(../img/reg4.gif) no-repeat 0 center;
+	padding-left:25px;
+}

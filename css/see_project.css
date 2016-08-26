@@ -1,0 +1,219 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+img{
+	vertical-align: middle;
+}
+body{
+	font-family: 'Arial Normal', 'Arial';
+	font-size: 12px;
+	font-weight: normal;
+	width: 100%;
+	height: auto;
+	background-color: #F6F6F6;
+}
+ul,li{
+	list-style: none;
+}
+div{
+	display: block;
+}
+#container{
+	width:1366px;
+/*	margin: 20px 10% 20px 10% ;*/
+	height: 643px;
+	background: url('../img/u0.jpg');
+	position: absolute;
+}
+.show{
+	position: absolute;
+	background: url('../img/works_bg.png');
+	top: 121px;
+	left: 194px;
+	width: 470px;
+    height: 187px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.poster{
+	border: 1px solid #ededed;
+	margin-top: 22px;
+	margin-left: 15px;
+	width: 224px;
+    height: 135px;
+    background: #fff;
+    float: left;
+}
+.poster img{
+	position: relative;
+    top: 10px;
+    left: 12px;
+    width: 200px;
+    height: 115px;
+}
+.word{
+	width: 200px;
+    height: 135px;
+    position: relative;
+    top: 5px;
+    left: 20px;
+    margin-top: 22px;
+    float: left;
+}
+.word h1{
+	font-size: 18px;
+    width: 180px;
+    line-height: 26px;
+    font-weight: bold;
+    color: #444444;
+}
+.workTime{
+	font-size: 12px;
+	color: #999;
+}
+.work_author{
+	width: 180px;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+}
+.work_author P{
+	color: #444444;
+	line-height: 22px;
+}
+/*以下遮罩层的布局*/
+#zhezhao{
+    width:100%;
+    height:100%;
+    background-color:#666666;
+    filter:alpha(opacity=60);
+    -moz-opacity:0.6;
+    opacity:0.6;
+    position:absolute;
+    left:0px;
+    top:0px;
+    display:block;
+    z-index:1000;
+}
+/*关闭按钮*/
+.close{
+	position: absolute;
+	z-index: 9000;
+	width: 16px;
+	height: 16px;
+	top: 50px;
+	right: 150px;
+	cursor: pointer;
+}
+.box{
+	clear: both;
+	width: 980px;
+	height: 430px;
+	position: absolute;
+	top: 100px;
+	left: 200px;
+	background-color: #ffffff;
+	z-index: 9000;
+	display: block;
+}
+.p_name{
+	line-height: 70px;
+	text-align: center;
+	margin-top: 10px;
+	font-size: 20px;
+}
+.left{
+	width: 450px;
+	float: left;
+	margin-top: 10px;
+	margin-left: 60px;
+}
+.show_poster{
+	width: 390px;
+	height: 290px;
+}
+.show_poster img{
+	width: 390px;
+	height: 280px;
+}
+.left p{
+	width: 390px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+}
+.right{
+	float: left;
+}
+.item p{
+	width: 80px;
+	text-align: right;
+	display: block;
+	float: left;
+	font-size: 14px;
+	line-height: 25px;
+}
+.about_author{
+	width: 300px;
+	min-height: 100px;
+	float: left;
+}
+.about_author p{
+	width: 200px;
+	display: block;
+	text-align: left;
+	line-height: 25px;
+	margin-left: 20px;
+}
+.about_time{
+	width: 300px;
+	margin-left: 20px;
+	line-height: 25px;
+	float: left;
+}
+.brief{
+	width: 330px;
+	min-height: 2+00px;
+	border: 1px solid #444;
+	float: left;
+	margin-left: 20px;
+}
+/*此处需要更改样式*/
+.brief p{
+
+}
+
+/*按钮*/
+.btn{
+	position: absolute;
+	z-index: 9000;
+	top:540px;
+	left: 500px;
+	display: block;
+}
+.btn input{
+	width: 120px;
+	height: 40px;
+	margin-left: 20px;
+	cursor: pointer;
+	font-size: 16px;
+	border: 0;
+}
+.edit{
+	background-color: #FE6400;
+	color: #ffffff;
+}
+.edit:hover{
+	background-color: #FE9400;
+}
+.delete{
+	background-color: #ffffff;
+}
+.delete:hover{
+	background-color: #FE9400;
+	color: #ffffff;
+}

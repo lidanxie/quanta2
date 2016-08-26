@@ -1,0 +1,194 @@
+/*查看动态列表的样式*/
+.search{
+	margin-top: 25px;
+	margin-left: 30px;
+	width: 252px;
+	line-height: 32px;
+	border: 4px #444444 solid;
+	border-top: 1px #444444 solid;
+	border-radius: 20px;
+	float: left;
+}
+.search_img{
+	width: 30px;
+	height: 30px;
+	margin: 2px 5px;
+	/*border-radius: 10px;*/
+	background: url("../img/search.png");
+	float: left;
+}
+.search input{
+	line-height: 32px;
+	width: 200px;
+	border: 0;
+	outline: medium;
+	font-size: 14px;
+}
+.search_input{
+	line-height: 32px;
+	float: left; 
+	width: 200px;
+}
+.search_btn{
+	margin-top: 30px;
+	margin-left: 20px;
+	width: 100px;
+	height: 30px;
+	background-color: #FE6400;
+	border: 0;
+	color: #ffffff;
+	font-size: 16px;
+	cursor: pointer;
+	box-shadow:3px 2px 3px #888888;
+-moz-box-shadow:3px 2px 3px #888888;
+-webkit-box-shadow:3px 2px 3px #888888;
+}
+.search_btn:hover{
+	background-color: #FE9400;
+}
+.add_msg{
+	width: 150px;
+	line-height: 30px;
+	float: right;
+	margin-right: 20px;
+	margin-top: 30px;
+	cursor: pointer;
+	background-color: #FE6400;
+	text-align: center;
+	color: #ffffff;
+	box-shadow:3px 2px 3px #888888;
+-moz-box-shadow:3px 2px 3px #888888;
+-webkit-box-shadow:3px 2px 3px #888888;
+}
+.add_msg:hover{
+	background-color: #FE9400;
+}
+.item{
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 8px;
+	height: 30px;
+	font-size: 14px;
+}
+.time{
+	float: left;
+	width: 150px;
+	line-height: 30px;
+	text-align: center;
+	border: 1px #888888 solid;
+}
+.msg_til{
+	float: left;
+	width: 400px;
+	line-height: 30px;
+	margin-left: 8px;
+	border: 1px #888888 solid;
+	color: #666666;
+	text-align: left;
+	padding: 0 5px;
+}
+.title{
+	text-align: center;
+	/*padding-left: 0;*/
+}
+.how_do{
+	margin-left: 5px;
+	float: left;
+	width: 150px;
+	line-height: 30px;
+	border: 1px #888888 solid;
+	text-align: center;
+}
+.see,.delete{
+	margin-left: 5px;
+	float: left;
+	width: 71.5px;
+	line-height: 30px;
+	border: 1px #888888 solid;
+	text-align: center;
+	color: #666666;
+}
+.page{
+	margin-top: 10px;
+	font-size: 14px;
+	position: relative;
+	height: 100px;
+}
+.show_all{
+	display: block;
+	margin-left: 60px;
+	margin-top: 10px;
+	float: left;
+	width: 120px;
+}
+.show_all p{
+	float: left;
+}
+.show_all .all{
+	float: left;
+	width: 40px;
+	height: 20px;
+	text-align: center;
+}
+.eve_page{
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.eve_page p{
+	float: left;
+}
+.eve_page .this_page{
+	float: left;
+	width: 40px;
+	height: 20px;
+	text-align: center;
+}
+.next_pre{
+	float: left;
+	margin-left:100px;
+}
+.next_pre a{
+	display: inline-block;
+	float: left;
+	width: 60px;
+	line-height: 30px;
+	border: 1px #888888 solid;
+	text-align: center;
+	color: #666666;
+	margin-left: 5px;
+}
+.next_pre a:hover{
+	background-color: #FE9400;
+	color: #ffffff;
+}
+.skip{
+	clear: both;
+	margin-left: 500px;
+	height: 30px;
+}
+.skip p{
+	padding-top: 10px;
+	float: left;
+	margin-left: 5px;
+}
+.skip .go_page{
+	margin-top: 5px;
+	float: left;
+	margin-left: 5px;
+	width: 40px;
+	height: 17px;
+}
+.go{
+	float: left;
+	width: 80px;
+	line-height: 25px;
+	background-color: #FE6400;
+	color: #ffffff;
+	text-align: center;
+	margin-top: 5px;
+	margin-left: 30px;
+}
+.go:hover{
+	background-color: #FE9400;
+}

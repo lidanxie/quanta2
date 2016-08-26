@@ -1,0 +1,91 @@
+/*此样式为查看信息页和查看项目共有的*/
+
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+img{
+	vertical-align: middle;
+}
+body{
+	font-family: 'Arial Normal', 'Arial';
+	font-size: 14px;
+	font-weight: normal;
+	width: 100%;
+	height: auto;
+	background-color: #F6F6F6;
+}
+ul,li{
+	list-style: none;
+}
+div{
+	display: block;
+}
+#container{
+	width:80%;
+	margin: 20px 10% 20px 10% ;
+	/*此处的背景需要自适应*/
+	height: auto;
+	min-height: 600px;
+	background-color: #ffffff;
+	position: absolute;
+}
+#header{
+	margin-top: 20px;
+	/*line-height: 60px;*/
+	text-align: center;
+}
+#header h1{
+	font-size: 36px;
+}
+#header p{
+	font-size: 16px;
+	margin-top: 10px;
+}
+#header p span{
+	margin-left: 80px;
+}
+.btn{
+	margin-top: 30px;
+	float: right;
+}
+.btn .edit,.btn .delete{
+	display: inline-block;
+	width: 150px;
+	line-height: 40px;
+	text-align: center;
+	border: 1px #888888 solid;
+	margin-right: 40px;
+	color: #666666;
+}
+.btn .edit{
+	background-color: #FE6400;
+	color: #ffffff;
+	border: 0;
+}
+.btn .edit:hover,.btn .delete:hover{
+	background-color: #FE9400;
+	color: #ffffff;
+	border: 0;
+}
+#content{
+	clear: both;
+	margin: 40px 40px;
+	/*margin-top: 100px;*/
+}
+#content p{
+	line-height: 25px;
+}
+
+/*以下为预览页面的样式*/
+.brief{
+	margin: 10px 30px;
+	line-height: 50px;
+	border: 2px #888888 solid;
+	text-align: center;
+	font-size: 16px;
+	background-color: #FFFF99;
+}

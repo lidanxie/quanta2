@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Quanta（量子）信息服务中心后台管理系统--填写个人信息页</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/write_msg.css">
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<div class="logo"><h2>欢迎您，<em><span>Q</span>uan<span>t</span>a</em>&nbsp;&nbsp;!</h2></div>
+			<!-- 需要添加链接 -->
+			<ul class="menu">
+				<li class="l_menu">首页管理</li>
+				<ul>
+					<li><a href="index.html">bannner管理</a></li>
+				    <li><a href="contacts.html">联系人管理</a></li>
+				</ul>
+				
+				    
+				<li class="l_menu">动态管理</li>
+				<ul>
+					<li><a href="dynamic.html">动态列表</a></li>
+				    <li><a href="dynamic_draft_box.html">草稿箱</a></li>
+				</ul>
+				
+
+				<li class="l_menu">项目中心</li>
+				<ul>
+					<li><a href="project_list.html">项目列表</a></li>
+				    <li><a href="project_draft_box.html">草稿箱</a></li>
+				</ul>
+				
+				
+				<li class="l_menu">管理层管理</li>
+				<ul>
+					<li><a href="manage_list.html">查看/修改</a></li>
+				    <li><a href="add_img.html">新增</a></li>
+				</ul>
+				
+			</ul>
+		</div>
+	    <div id="content">
+	    	<div id="top">
+				<p>欢迎使用 Quanta（量子）信息技术服务中心后台管理系统</p>
+			</div>
+			<div id="main">
+				<div class="sub">
+					<a href="index.html">后台管理&nbsp;</a>
+					<a href="manage_list.html">|&nbsp;管理层更新</a>
+				</div>
+
+				<!-- 以下需要动态添加：通过jq和ajax获取信息，然后动态生成，添加 -->
+				<form method="post" action="">
+					<div class="item">
+						<div class="person_pho">
+							<!-- 图片注意路径 -->
+							<img src="img/u63.jpg">
+						</div>
+
+						<div class="l_item">
+							<p>名称：</p>
+							<!-- 以下需要获取到图片的名称 -->
+							<input type="text" class="per_name">
+						</div>
+
+						<div class="l_item">
+							<p>部门：</p>
+							<select class="period">
+						        <option value="1">1</option>
+						        <option value="2">2</option>
+						        <option value="3">3</option>
+						        <option value="4">4</option>
+						        <option value="5">5</option>
+						        <option value="6">6</option>
+						        <option value="7">7</option>
+						        <option value="8">8</option>
+						        <option value="9">9</option>
+						        <option value="10">10</option>
+						        <option value="11">11</option>
+						        <option value="新增">新增</option>
+						        <option selected>请选择</option>
+					        </select>
+					        <span>届</span>
+					        <select class="department">
+						        <option>核心管理层</option>
+						        <option>运营部</option>
+						        <option>设计部</option>
+						        <option>研发部</option>
+						        <option selected>请选择</option>
+					        </select>
+						</div>
+
+						<div class="l_item">
+							<p>职位：</p>
+							<input type="text" class="job">
+						</div>
+
+						<div class="l_item">
+							<p>备注：</p>
+							<textarea name="other" onpropertychange="if(this.scrollHeight>80) this.style.posHeight=this.scrollHeight+5" class="other"></textarea>
+						</div>
+					</div>
+
+
+
+					<!-- 以下为测试 -->
+					<div class="item">
+						<div class="person_pho">
+							<!-- 图片注意路径 -->
+							<img src="img/u63.jpg">
+						</div>
+
+						<div class="l_item">
+							<p>名称：</p>
+							<!-- 以下需要获取到图片的名称 -->
+							<input type="text" class="per_name">
+						</div>
+
+						<div class="l_item">
+							<p>部门：</p>
+							<select class="period">
+						        <option value="1">1</option>
+						        <option value="2">2</option>
+						        <option value="3">3</option>
+						        <option value="4">4</option>
+						        <option value="5">5</option>
+						        <option value="6">6</option>
+						        <option value="7">7</option>
+						        <option value="8">8</option>
+						        <option value="9">9</option>
+						        <option value="10">10</option>
+						        <option value="11">11</option>
+						        <option value="新增">新增</option>
+						        <option selected>请选择</option>
+					        </select>
+					        <span>届</span>
+					        <select class="department">
+						        <option>核心管理层</option>
+						        <option>运营部</option>
+						        <option>设计部</option>
+						        <option>研发部</option>
+						        <option selected>请选择</option>
+					        </select>
+						</div>
+
+						<div class="l_item">
+							<p>职位：</p>
+							<input type="text" class="job">
+						</div>
+
+						<div class="l_item">
+							<p>备注：</p>
+							<textarea name="other" onpropertychange="if(this.scrollHeight>80) this.style.posHeight=this.scrollHeight+5" class="other"></textarea>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="person_pho">
+							<!-- 图片注意路径 -->
+							<img src="img/u63.jpg">
+						</div>
+
+						<div class="l_item">
+							<p>名称：</p>
+							<!-- 以下需要获取到图片的名称 -->
+							<input type="text" class="per_name">
+						</div>
+
+						<div class="l_item">
+							<p>部门：</p>
+							<select class="period">
+						        <option value="1">1</option>
+						        <option value="2">2</option>
+						        <option value="3">3</option>
+						        <option value="4">4</option>
+						        <option value="5">5</option>
+						        <option value="6">6</option>
+						        <option value="7">7</option>
+						        <option value="8">8</option>
+						        <option value="9">9</option>
+						        <option value="10">10</option>
+						        <option value="11">11</option>
+						        <option value="新增">新增</option>
+						        <option selected>请选择</option>
+					        </select>
+					        <span>届</span>
+					        <select class="department">
+						        <option>核心管理层</option>
+						        <option>运营部</option>
+						        <option>设计部</option>
+						        <option>研发部</option>
+						        <option selected>请选择</option>
+					        </select>
+						</div>
+
+						<div class="l_item">
+							<p>职位：</p>
+							<input type="text" class="job">
+						</div>
+
+						<div class="l_item">
+							<p>备注：</p>
+							<textarea name="other" onpropertychange="if(this.scrollHeight>80) this.style.posHeight=this.scrollHeight+5" class="other"></textarea>
+						</div>
+					</div>
+
+					<!-- 以上都是需要写在jq中动态添加的 -->
+					<div class="save_btn">
+						<input type="button" value="保存">
+					</div>
+				</form>
+			</div>
+	    </div>
+	</div>
+</body>
+</html>

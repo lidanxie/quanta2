@@ -1,0 +1,140 @@
+/*banner管理的页面*/
+.middle{
+	width: 100%;
+	height: 40px;
+}
+.tip{
+	width: 170px;
+	height: 30px;
+	float: left;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.tip p{
+	line-height: 30px;
+	font-size: 14px;
+	color: #666666;
+	float: left;
+}
+.col_btn,.delete{
+	margin-left: 40px;
+	margin-top: 10px;
+	line-height: 35px;
+	width: 150px;
+	text-align: center;
+	float: left;
+	background-color: #FF8A3C;
+	border-radius: 5px;
+	color: #ffffff;
+	cursor: pointer;
+}
+/*banner照片*/
+.banner{
+	clear: both;
+	padding-top: 20px;
+	min-height: 300px;
+	/*position: relative;*/
+}
+.banner ul li{
+	width: 245px;
+	height: 180px;
+	display: inline-block;
+	float: left;
+	/*暂时调试用*/
+	/*border: #888888 solid 2px;*/
+}
+.item .img{
+	width: 200px;
+	height: 100px;
+	margin: 0 30px;
+	margin-right: 10px;
+	border: #666666 1px solid;
+	padding:15px 0;
+	position: relative;
+}
+.item img{
+	width: 200px;
+	height: 100px;
+}
+/*以上*/
+.item p,.add_banner p{
+	text-align: center;
+	line-height: 30px;
+	color: #444444;
+
+}
+.add_banner{
+	display: inline-block;
+}
+.add_banner img{
+	width: 50px;
+	height: 50px;
+	margin: 0px 30px;
+	border: #666666 1px solid;
+	padding:25px 75px;
+}
+/*多选框*/
+.roundedTwo {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+  width: 28px;
+  height: 28px;
+  background: #fcfff4;
+ /* background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);*/
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.roundedTwo label {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  cursor: pointer;
+  background: -moz-linear-gradient(top, #FF8A3C 0%, #FF8A3C 100%);
+  background: -webkit-linear-gradient(top, #FF8A3C 0%, #FF8A3C 100%);
+  background: linear-gradient(to bottom, #FF8A3C 0%, #FF8A3C 100%);
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+}
+.roundedTwo label:after {
+  content: '';
+  width: 9px;
+  height: 5px;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  border: 3px solid #fcfff4;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.roundedTwo label:hover::after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
+}
+.roundedTwo input[type=checkbox] {
+  visibility: hidden;
+}
+.roundedTwo input[type=checkbox]:checked + label:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}

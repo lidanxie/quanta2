@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Quanta（量子）信息服务中心后台管理系统--批量上传照片页</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/add_img.css">
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<div class="logo"><h2>欢迎您，<em><span>Q</span>uan<span>t</span>a</em>&nbsp;&nbsp;!</h2></div>
+			<!-- 需要添加链接 -->
+			<ul class="menu">
+				<li class="l_menu">首页管理</li>
+				<ul>
+					<li><a href="index.html">bannner管理</a></li>
+				    <li><a href="contacts.html">联系人管理</a></li>
+				</ul>
+				
+				    
+				<li class="l_menu">动态管理</li>
+				<ul>
+					<li><a href="dynamic.html">动态列表</a></li>
+				    <li><a href="dynamic_draft_box.html">草稿箱</a></li>
+				</ul>
+				
+
+				<li class="l_menu">项目中心</li>
+				<ul>
+					<li><a href="project_list.html">项目列表</a></li>
+				    <li><a href="project_draft_box.html">草稿箱</a></li>
+				</ul>
+				
+				
+				<li class="l_menu">管理层管理</li>
+				<ul>
+					<li><a href="manage_list.html">查看/修改</a></li>
+				    <li><a href="add_img.html">新增</a></li>
+				</ul>
+				
+			</ul>
+		</div>
+	    <div id="content">
+	    	<div id="top">
+				<p>欢迎使用 Quanta（量子）信息技术服务中心后台管理系统</p>
+			</div>
+	    	<div id="main">
+	    		<div class="sub">
+					<a href="index.html">后台管理&nbsp;</a>
+					<a href="manage_list.html">|&nbsp;管理层更新</a>
+				</div>
+
+				<!-- 表单提交:上传照片 -->
+				<form action="" method="post">
+					<div class="img_addr">
+					<p>上传到：</p>
+					<select class="period">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="新增">新增</option>
+						<option selected>请选择</option>
+					</select>
+					<p>届</p>
+					<select class="department">
+						<option>核心管理层</option>
+						<option>运营部</option>
+						<option>设计部</option>
+						<option>研发部</option>
+						<option selected>请选择</option>
+					</select>
+				</div>
+
+				<div class="upload_img">
+					<!-- 通过jq自动添加,点击添加的时候添加图片 -->
+					<ul>
+						<li><img src="img/u63.jpg">
+							<p>照片名字</p>
+						</li>
+						<li><img src="img/u63.jpg">
+							<p>照片名字</p>
+						</li>
+						<li><img src="img/u63.jpg">
+							<p>照片名字</p>
+						</li>
+						<li><img src="img/u63.jpg">
+							<p>照片名字</p>
+						</li>
+						<li><img src="img/u63.jpg">
+							<p>照片名字</p>
+						</li>
+						<li><img src="img/u63.jpg">
+							<p>照片名字</p>
+						</li>
+						<li><img src="img/u63.jpg">
+							<p>照片名字</p>
+						</li>
+						<li><img src="img/u63.jpg">
+							<p>照片名字</p>
+						</li>
+						<li><img src="img/u63.jpg">
+							<p>照片名字</p>
+						</li>
+						<li><img src="img/u63.jpg">
+							<p>照片名字</p>
+						</li>
+						<li><img src="img/u63.jpg">
+							<p>照片名字</p>
+						</li>
+						<li><img src="img/u63.jpg">
+							<p>照片名字</p>
+						</li>
+						<li><img src="img/u63.jpg">
+							<p>照片名字</p>
+						</li>
+
+						<!-- 以下为继续添加的按钮 -->
+						<li class="add_img">
+							<div class="img_upload">
+								<p>继续添加照片</p>
+								 <input type="file">
+							</div>
+							<!-- <a href="javascript:;" class="img_upload"><p>继续添加照片</p>
+							   <input type="file">
+						    </a> -->
+						</li>
+						
+					</ul>
+				</div>
+
+				<div class="btn">
+					<input type="button" value="开始上传"  class="begin">
+					<input type="button" value="继续上传"  class="again">
+				</div>
+				</form>
+				
+	    	</div>
+	    	
+	    </div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+img{
+	vertical-align: middle;
+}
+body{
+	font-family: 'Arial Normal', 'Arial';
+	font-size: 16px;
+	font-weight: normal;
+	width: 100%;
+	height: auto;
+	background-color: #F6F6F6;
+}
+ul,li{
+	list-style: none;
+}
+div{
+	display: block;
+}
+#container{
+	width:80%;
+	margin: 20px 10% 20px 10% ;
+	/*此处的背景需要自适应*/
+	height: auto;
+	min-height: 600px;
+	background-color: #ffffff;
+	position: absolute;
+}
+.sub{
+	margin-top: 20px;
+	margin-left: 20px;
+	
+}
+.sub a{
+	color: #666666;
+	font-size: 14px;
+}
+.back{
+	position: absolute;
+	left: 30px;
+	margin-top: 20px;
+	margin-left: 50px;
+	color: #555555;
+	font-size: 16px;
+}
+.item{
+	margin-top: 20px;
+	margin-left: 140px;
+	min-height: 35px;
+	display: block;
+}
+.item p{
+	width: 100px;
+	line-height: 30px;
+	float: left;
+	text-align: right;
+	margin-right: 20px;
+}
+
+.item input{
+	width: 600px;
+	line-height: 28px;
+}
+.about_author{
+	width: 600px;
+	min-height: 30px;
+	margin-left: 120px;
+}
+.select{
+	width: 600px;
+	height: 30px;
+	padding-bottom: 15px;
+}
+.about_author select{
+	height: 28px;
+	float: left;
+}
+.about_author input{
+	width: 100px;
+	line-height: 25px;
+	float: left;
+	margin-left: 10px;
+}
+
+.add_btn{
+	top: 0px;
+	left: 240px;
+}
+.add_btn .add,.add_btn .subtract{
+	float: left;
+	display: block;
+	margin-left: 20px;
+}
+.add img, .subtract img{
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}
+/*上传照片/文档*/
+.item .img,.item .file,.item a{
+	position: relative;
+	float: left;
+	text-align: center;
+	width: 180px;
+	line-height: 40px;
+	background-color: #FE6400;
+	border-radius: 5px;
+	color: #ffffff;
+	box-shadow:3px 2px 3px #888888;
+-moz-box-shadow:3px 2px 3px #888888;
+-webkit-box-shadow:3px 2px 3px #888888;
+
+}
+.item .img:hover,.item .file:hover,.item a:hover{
+	background-color: #FE9400;
+}
+.img input,.file input{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 150px;
+	height: 40px;
+	cursor: pointer;
+	filter:alpha(opacity=0);   
+    -moz-opacity:0;   
+    -khtml-opacity: 0;   
+    opacity: 0;
+}
+.point p{
+	width: 300px;
+	margin-top: 10px;
+	float: left;
+}
+.point strong{
+	color: red;
+	margin-right: 5px;
+}
+.editor-container{
+	width: 900px;
+	margin: 0 auto;
+	position: relative;
+	margin-top: 10px;
+}
+#editor-trigger{
+	height: 400px;
+	width: 100%;
+/*	border: #FE6400 1px solid;
+	font-size: 18px;*/
+}
+.item a{
+	display: inline-block;
+	margin-top: 20px;
+	margin-left: 20px;
+}

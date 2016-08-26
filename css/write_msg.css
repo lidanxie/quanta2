@@ -1,0 +1,60 @@
+/*填写部员信息样式*/
+.item{
+	min-height: 190px;
+	margin-top: 20px;
+	margin-left: 40px;
+}
+.person_pho{
+	width: 150px;
+	height: 170px;
+	border: 1px solid #888888;
+	float: left;
+}
+.person_pho img{
+	width: 113px;
+	height: 170px;
+	margin-left: 18px;
+}
+.l_item{
+	float: left;
+	margin-left: 60px;
+	margin-top: 5px;
+}
+.l_item p{
+	float: left;
+	width: 60px;
+	line-height: 40px;
+}
+.l_item input{
+	width: 240px;
+	height: 30px;
+}
+.l_item select{
+	height: 30px;
+}
+.l_item span{
+	width: 30px;
+	margin-left: 10px;
+	margin-right: 20px;
+}
+.l_item textarea{
+	width: 280px;
+	height: 45px;
+}
+/*保存按钮*/
+.save_btn{
+	height: 80px;
+}
+.save_btn input{
+	width: 90px;
+	height: 31px;
+	margin-top: 20px;
+	background-color: #66CCFF;
+	color: #ffffff;
+	border: 0;
+	cursor: pointer;
+	box-shadow:3px 2px 3px #888888;
+    -moz-box-shadow:3px 2px 3px #888888;
+    -webkit-box-shadow:3px 2px 3px #888888;
+    font-weight: bold;
+}

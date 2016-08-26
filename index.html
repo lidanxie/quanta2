@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Quanta（量子）信息服务中心后台管理系统--首页</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<div class="logo"><h2>欢迎您，<em><span>Q</span>uan<span>t</span>a</em>&nbsp;&nbsp;!</h2></div>
+			<!-- 需要添加链接 -->
+			<ul class="menu">
+				<li class="l_menu">首页管理</li>
+				<ul>
+					<li><a href="index.html">bannner管理</a></li>
+				    <li><a href="contacts.html">联系人管理</a></li>
+				</ul>
+				
+				    
+				<li class="l_menu">动态管理</li>
+				<ul>
+					<li><a href="dynamic.html">动态列表</a></li>
+				    <li><a href="dynamic_draft_box.html">草稿箱</a></li>
+				</ul>
+				
+
+				<li class="l_menu">项目中心</li>
+				<ul>
+					<li><a href="project_list.html">项目列表</a></li>
+				    <li><a href="project_draft_box.html">草稿箱</a></li>
+				</ul>
+				
+				
+				<li class="l_menu">管理层管理</li>
+				<ul>
+					<li><a href="manage_list.html">查看/修改</a></li>
+				    <li><a href="add_img.html">新增</a></li>
+				</ul>
+				
+			</ul>
+		</div>
+		<div id="content">
+			<div id="top">
+				<p>欢迎使用 Quanta（量子）信息技术服务中心后台管理系统</p>
+			</div>
+			<div id="main">
+				<div class="sub">
+					<a href="index.html">后台管理&nbsp;</a>
+					<a href="index.html">|&nbsp;banner管理</a>
+				</div>
+				<div class="middle">
+					<div class="tip">
+					    <p>可拖动图片以改变展示顺序</p>
+				    </div>
+				    <div class="col_btn">
+					    <p>批量管理banner</p>
+				    </div>
+				<!-- 动态弹出：删除banner -->
+				    <div class="delete"><p></p></div>
+				</div>
+				
+				<!-- 下面的为banner -->
+				<!-- 以下需要通过Ajax从数据库获取 -->
+				<div class="banner">
+					<ul>
+						<li class="item">
+							<!-- 下面只是布局测试用，需要通过jq添加 -->
+                            <div class="img">
+                            	<a href="banner.html"><img src="img/u59.png"></a>
+                            	<section title=".roundedTwo">
+                                </section>
+                            </div>
+							<a href="#"><p>Quanta&nbsp;11th招新</p></a>
+						</li>
+						<li class="item">
+                            <div class="img">
+                            	<a href="#"><img src="img/u59.png"></a>
+                            	<section title=".roundedTwo">
+                                    <div class="roundedTwo">
+                                      <input type="checkbox" value="None" id="2" name="check"  checked/>
+                                      <label for="2"></label>
+                                    </div>
+                                </section>
+                            </div>
+							<a href="#"><p>Quanta&nbsp;11th招新</p></a>
+						</li>
+						<li class="item">
+                            <div class="img">
+                            	<a href="#"><img src="img/u59.png"></a>
+                            	<section title=".roundedTwo">
+                                    <div class="roundedTwo">
+                                      <input type="checkbox" value="None" id="3" name="check"  checked/>
+                                      <label for="3"></label>
+                                    </div>
+                                </section>
+                            </div>
+							<a href="#"><p>Quanta&nbsp;11th招新</p></a>
+						</li>
+						<li class="add_banner">
+							<a href="banner.html"><img src="img/add_banner.png"></a>
+							<a href="banner.html"><p>点击添加banner</p></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <div id="footer">
+			<ul id="contact">
+				<li>友情链接</li>
+                <li><a href="http://www.gdufs.edu.cn">广东外语外贸大学</a></li>
+                <li><a href="http://www.quantacenter.com">quanta首页</a></li>
+                <li><a href="http://csi.gdufs.edu.cn/">思科信息学院</a></li>
+                <li>Copyright&nbsp;&copy2016&nbsp;All&nbsp;rights&nbsp;reserved</li>
+            </ul>
+	</div> -->
+</body>
+</html>
