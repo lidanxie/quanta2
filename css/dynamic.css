@@ -23,6 +23,7 @@
 	border: 0;
 	outline: medium;
 	font-size: 14px;
+	position: absolute;
 }
 .search_input{
 	line-height: 32px;
@@ -63,7 +64,7 @@
 .add_msg:hover{
 	background-color: #FE9400;
 }
-.item{
+.tiH,.item{
 	margin-left: 10px;
 	margin-right: 10px;
 	margin-top: 8px;
@@ -72,14 +73,16 @@
 }
 .time{
 	float: left;
-	width: 150px;
+	/*width: 150px;*/
+	width: 20%;
 	line-height: 30px;
 	text-align: center;
 	border: 1px #888888 solid;
 }
 .msg_til{
 	float: left;
-	width: 400px;
+	/*width: 400px;*/
+	width: 50%;
 	line-height: 30px;
 	margin-left: 8px;
 	border: 1px #888888 solid;
@@ -88,13 +91,15 @@
 	padding: 0 5px;
 }
 .title{
+	width: 50%;
 	text-align: center;
-	/*padding-left: 0;*/
+	padding: 0 5px;
 }
 .how_do{
 	margin-left: 5px;
 	float: left;
-	width: 150px;
+	/*width: 150px;*/
+	width: 26%;
 	line-height: 30px;
 	border: 1px #888888 solid;
 	text-align: center;
@@ -102,24 +107,62 @@
 .see,.delete{
 	margin-left: 5px;
 	float: left;
-	width: 71.5px;
+	/*width: 71.5px;*/
+	width: 12.5%;
 	line-height: 30px;
 	border: 1px #888888 solid;
 	text-align: center;
 	color: #666666;
 }
-.page{
-	margin-top: 10px;
-	font-size: 14px;
+#pages{
+	margin-top: 20px;
+	font-size: 12px;
 	position: relative;
-	height: 100px;
+	height: 80px;
+	margin-left: 5%;
+	/*display: table-cell;*/
 }
+
+#pages a{
+                text-decoration: none;
+                background-color: White;
+                border:1px solid #e8e8e8;
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                color: Black;
+                text-align: center;
+                line-height: 30px;
+        }
+        #pages a:hover
+        {
+                color: #f40;
+                border: 1px solid #f40;
+        }
+        #pages .on
+        {
+                background-color: #f40;
+                color: White;
+                border: 1px solid #f40;
+        }
+        #pages .on:hover
+        {
+                background-color: #f40;
+                color: White;
+                border: 1px solid #f40;
+        }
+
+
+
+
+        /*以上为测试*/
 .show_all{
 	display: block;
 	margin-left: 60px;
 	margin-top: 10px;
 	float: left;
-	width: 120px;
+	/*width: 120px;*/
+	width: 13%;
 }
 .show_all p{
 	float: left;
@@ -134,6 +177,7 @@
 	float: left;
 	margin-left: 10px;
 	margin-top: 10px;
+	width: 20%;
 }
 .eve_page p{
 	float: left;
@@ -147,11 +191,13 @@
 .next_pre{
 	float: left;
 	margin-left:100px;
+	width: 40%;
 }
 .next_pre a{
 	display: inline-block;
 	float: left;
-	width: 60px;
+	/*width: 60px;*/
+	width: 20%;
 	line-height: 30px;
 	border: 1px #888888 solid;
 	text-align: center;
@@ -164,8 +210,9 @@
 }
 .skip{
 	clear: both;
-	margin-left: 500px;
+	margin-left: 60%;
 	height: 30px;
+	width: 40%;
 }
 .skip p{
 	padding-top: 10px;
@@ -191,4 +238,40 @@
 }
 .go:hover{
 	background-color: #FE9400;
+}
+
+/*隐藏的搜索框中的内容*/
+.bigautocomplete-layout{
+	display: block;;
+	background-color: #FFFFFF;
+	border: 1px solid #BCBCBC;
+	position: absolute;
+	z-index: 100;
+	max-height: 220px;
+	overflow-x:hidden;
+	overflow-y:auto; 
+}
+.bigautocomplete-layout table{
+	border-collapse: collapse;
+    border-spacing: 0;	
+	background: none repeat scroll 0 0 #FFFFFF;
+	width: 100%;
+	cursor: default;
+}
+
+.bigautocomplete-layout table tr{
+	background: none repeat scroll 0 0 #FFFFFF;
+}
+
+.bigautocomplete-layout .ct{
+	background: none repeat scroll 0 0 #D2DEE8 !important;
+}
+.bigautocomplete-layout div{
+	word-wrap:break-word;
+	word-break:break-all;
+	padding:1px 5px;
+}
+/*鼠标移动到某一条信息时改变样式*/
+.tiH,.even{
+	background-color: #fff38f;
 }

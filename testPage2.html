@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js" type="text/javascript"></script>
+        <style>
+        body{font-size: 12px;}
+        *{padding: 0;margin: 0}
+        a{color: #444}
+        .box{overflow: hidden;}
+        .items{height: 100px;display: none;}
+        .pre,.next,.page-number,.all-page,.page-btn{float: left;display: inline;height: 22px;line-height: 22px;}
+        .page-btn{width: 47px;}
+        .text{width: 27px;height: 22px;}
+        .page-number li{float: left;display: inline;margin-left:2px;width: 24px;text-align: center;border:1px  #ccc solid;cursor: pointer; }
+        .box{margin-bottom: 10px;}
+        .page-number li.page-cur{border-color: #f67301;color: #f67301}
+        .pre{border:1px #ccc solid;background: url(img/left.gif) no-repeat 9px center;text-indent: 19px}
+        .next{border:1px #ccc solid;background: url(img/right.gif) no-repeat 50px center;text-indent: 9px;margin:0 2px}
+        .next,.pre{width: 64px;}
+        .defau{color: #ccc}
+        .page a.defau:hover{color: #ccc;text-decoration: none;cursor: default;}
+        .g-db{display: block;}
+        </style>
+    </head>
+    <script type="text/javascript">
+    function AllPage(dom) {
+    this.Parent = dom;
+    this.flag = true;
+    this.init.apply(this, arguments);
+    this.active = 1;
+
+};
+AllPage.prototype = {
+    init: function(data) {
+        this.setLi();
+        this.pageCtr()
+    },
+    setLi: function() {
+        var me = this,
+            len = this.Parent.find('.items').length, //列表的总条数
+            PageNum = Math.round(len / 5), //每页显示5条供多少页
+            oLi = "<li class='page-cur'>1</li>",
+            oLiA = "<li>...</li>";
+        $(".all-page span").text(PageNum)
+        if (PageNum > 10) {
+            for (var i = 1; i < 6; i++) {
+                oLi += "<li>" + (i + 1) + "</li>"
+            }
+
+
+            oLiA += "<li>" + PageNum + "</li>"
+            $(".page-number").html(oLi + oLiA);
+
+        } else {
+            for (var i = 1; i < PageNum; i++) {
+                oLi += "<li>" + (i + 1) + "</li>"
+            }
+            $(".page-number").html(oLi);
+        }
+
+    },
+    fixLi: function(index) {
+        var me = this,
+            len = this.Parent.find('.items').length,
+            PageNum = Math.round(len / 5),
+            oLi = "<li>1</li><li>...</li>",
+            oLiA = "",
+            oLiB = "<li>...</li>"
+        for (var i = index - 2; i < index; i++) {
+            oLiA += "<li>" + (i + 1) + "</li>";
+        }
+        for (var i = index; i < index + 2; i++) {
+            oLiA += "<li>" + (i + 1) + "</li>"
+        }
+        if (index < PageNum - 3) {
+            oLiA += "<li>...</li><li>" + PageNum + "</li>"
+        } else {
+            if (me.flag) {
+                for (var i = index; i < PageNum; i++) {
+                    oLiA += "<li>" + (i + 1) + "</li>";
+                    me.flag = false;
+                }
+            }
+        }
+        $(".page-number").html(oLi + oLiA);
+    },
+    _fixLi: function() {
+        var me = this,
+            len = this.Parent.find('.items').length,
+            PageNum = Math.round(len / 5),
+            oLi = "<li>1</li><li>...</li>",
+            oLiA = "";
+        for (var i = PageNum - 5; i < PageNum; i++) {
+            oLiA += "<li>" + (i + 1) + "</li>"
+        }
+        $(".page-number").html(oLi + oLiA);
+    },
+    pageCtr: function() {
+        var split = 5,
+            me = this,
+            len = this.Parent.find('.items').length,
+            PageNum = Math.round(len / 5),
+            PageStart = 5;
+        //点击页码
+        $(".page-number").delegate('li', 'click', function() {
+            me.active = $(this).text();
+            if (me.active == "...") {
+                return
+            } else {
+                var Tpr = me.active - 1;
+                $('.items').hide().slice(Tpr * PageStart, me.active * PageStart).show();
+                if (PageNum > 10) {
+                    if (me.active > 5 && me.active < PageNum - 2) {
+                        me.fixLi(me.active - 1);
+                    } else if (me.active < 5) {
+                        me.setLi()
+                    } else if (me.active >= PageNum - 2) {
+                        me._fixLi();
+                    }
+                }
+                $(".page-number").find('li').each(function() {
+                    if ($(this).text() == me.active) {
+                        $(this).addClass("page-cur").siblings().removeClass("page-cur");
+                    }
+                })
+            }
+            me._Style(me.active, PageNum);
+        });
+        //搜索
+        $('.page-btn').bind('click', function() {
+            me.active = $(".text").val() || 1;
+            if (!isNaN(me.active)) {
+                var Tpr = me.active - 1,
+                    len = me.Parent.find('.items').length / 5;
+                if (me.active <= len && me.active > 0) {
+                    $('.items').hide().slice(Tpr * PageStart, me.active * PageStart).show();
+                } else {
+                    alert('页面输入超出范围了!')
+                    return false;
+                }
+
+                if (PageNum > 10) {
+                    if (me.active > 5 && me.active < PageNum - 2) {
+                        me.fixLi(Tpr);
+                    } else if (me.active < 5) {
+                        me.setLi()
+                    } else if (me.active >= PageNum - 2) {
+                        me._fixLi();
+                    }
+                }
+                $(".page-number").find('li').each(function() {
+                    if ($(this).text() == me.active) {
+                        $(this).addClass("page-cur").siblings().removeClass("page-cur");
+                    }
+                });
+                me._Style(me.active, PageNum);
+            } else {
+                return
+            }
+
+        });
+        //上一页
+        $(".pre").bind('click', function() {
+            if (me.active > 1) {
+                me.active -= 1;
+                var Tpr = me.active - 1;
+                $('.items').hide().slice(Tpr * PageStart, me.active * PageStart).show();
+                if (PageNum > 10) {
+                    if (me.active > 5 && me.active < PageNum - 2) {
+                        me.fixLi(me.active - 1);
+                    } else if (me.active < 5) {
+                        me.setLi()
+                    } else if (me.active > PageNum - 2) {
+                        me._fixLi();
+                    }
+                }
+                $(".page-number").find('li').each(function() {
+                    if ($(this).text() == me.active) {
+                        $(this).addClass("page-cur").siblings().removeClass("page-cur");
+                    }
+                });
+            }
+            me._Style(me.active, PageNum);
+        });
+        //下一页
+        $(".next").bind('click', function() {
+
+            if (me.active < PageNum) {
+                me.active = Number(me.active) + 1;
+                var Tpr = me.active - 1;
+
+                $('.items').hide().slice(Tpr * PageStart, me.active * PageStart).show();
+
+                if (PageNum > 10) {
+                    if (me.active > 5 && me.active < PageNum - 2) {
+                        me.fixLi(me.active - 1);
+                    } else if (me.active < 5) {
+                        me.setLi()
+                    } else if (me.active > PageNum - 2) {
+                        me._fixLi();
+                    }
+                }
+                $(".page-number").find('li').each(function() {
+                    if ($(this).text() == me.active) {
+                        $(this).addClass("page-cur").siblings().removeClass("page-cur");
+                    }
+                });
+            }
+            me._Style(me.active, PageNum);
+        });
+    },
+    _Style: function(start, end) {
+        if (start == end) {
+            $(".next").addClass('defau');
+            $(".pre").removeClass('defau');
+        } else if (start > 1 && start < end) {
+            $(".pre").removeClass('defau');
+            $(".next").removeClass('defau');
+        } else if (start == 1) {
+            $(".pre").addClass('defau')
+            $(".next").removeClass('defau');
+        }
+    }
+};
+$.fn.Page = function() {
+    var $me = $(this)
+    return new AllPage($me)
+}
+    </script>
+    <body>
+        <div class="box">
+            <div class="msg-scroll">
+                <div class="items g-db">
+                   1asdsa
+                </div>
+                <div class="items g-db">
+                    2asdsa
+                </div>
+                <div class="items g-db">
+                    3asdsa
+                </div>
+                <div class="items g-db">
+                   4 asdsa
+                </div>
+                <div class="items g-db">
+                    5asdsa
+                </div>
+                <div class="items">
+                   6 asdsa
+                </div>
+                <div class="items">
+                    7asdsa
+                </div>
+                <div class="items">
+                   8 asdsa
+                </div>
+                <div class="items">
+                    9asdsa
+                </div>
+                <div class="items">
+                    10asdsa
+                </div>
+
+                <div class="items g-db">
+                   1asdsa
+                </div>
+                <div class="items g-db">
+                    2asdsa
+                </div>
+                <div class="items g-db">
+                    3asdsa
+                </div>
+                <div class="items g-db">
+                   4 asdsa
+                </div>
+                <div class="items g-db">
+                    5asdsa
+                </div>
+                <div class="items">
+                   6 asdsa
+                </div>
+                <div class="items">
+                    7asdsa
+                </div>
+                <div class="items">
+                   8 asdsa
+                </div>
+                <div class="items">
+                    9asdsa
+                </div>
+                <div class="items">
+                    10asdsa
+                </div>
+                <div class="items g-db">
+                   1asdsa
+                </div>
+                <div class="items g-db">
+                    2asdsa
+                </div>
+                <div class="items g-db">
+                    3asdsa
+                </div>
+                <div class="items g-db">
+                   4 asdsa
+                </div>
+                <div class="items g-db">
+                    5asdsa
+                </div>
+                <div class="items">
+                   6 asdsa
+                </div>
+                <div class="items">
+                    7asdsa
+                </div>
+                <div class="items">
+                   8 asdsa
+                </div>
+                <div class="items">
+                    9asdsa
+                </div>
+                <div class="items">
+                    10asdsa
+                </div>
+                <div class="items g-db">
+                   1asdsa
+                </div>
+                <div class="items g-db">
+                    2asdsa
+                </div>
+                <div class="items g-db">
+                    3asdsa
+                </div>
+                <div class="items g-db">
+                   4 asdsa
+                </div>
+                <div class="items g-db">
+                    5asdsa
+                </div>
+                <div class="items">
+                   6 asdsa
+                </div>
+                <div class="items">
+                    7asdsa
+                </div>
+                <div class="items">
+                   8 asdsa
+                </div>
+                <div class="items">
+                    9asdsa
+                </div>
+                <div class="items">
+                    10asdsa
+                </div>
+
+                 <div class="items g-db">
+                   1asdsa
+                </div>
+                <div class="items g-db">
+                    2asdsa
+                </div>
+                <div class="items g-db">
+                    3asdsa
+                </div>
+                <div class="items g-db">
+                   4 asdsa
+                </div>
+                <div class="items g-db">
+                    5asdsa
+                </div>
+                <div class="items">
+                   6 asdsa
+                </div>
+                <div class="items">
+                    7asdsa
+                </div>
+                <div class="items">
+                   8 asdsa
+                </div>
+                <div class="items">
+                    9asdsa
+                </div>
+                <div class="items">
+                    10asdsa
+                </div>
+
+                 <div class="items g-db">
+                   1asdsa
+                </div>
+                <div class="items g-db">
+                    2asdsa
+                </div>
+                <div class="items g-db">
+                    3asdsa
+                </div>
+                <div class="items g-db">
+                   4 asdsa
+                </div>
+                <div class="items g-db">
+                    5asdsa
+                </div>
+                <div class="items">
+                   6 asdsa
+                </div>
+                <div class="items">
+                    7asdsa
+                </div>
+                <div class="items">
+                   8 asdsa
+                </div>
+                <div class="items">
+                    9asdsa
+                </div>
+                <div class="items">
+                    10asdsa
+                </div>
+
+                 <div class="items g-db">
+                   1asdsa
+                </div>
+                <div class="items g-db">
+                    2asdsa
+                </div>
+                <div class="items g-db">
+                    3asdsa
+                </div>
+                <div class="items g-db">
+                   4 asdsa
+                </div>
+                <div class="items g-db">
+                    5asdsa
+                </div>
+                <div class="items">
+                   6 asdsa
+                </div>
+                <div class="items">
+                    7asdsa
+                </div>
+                <div class="items">
+                   8 asdsa
+                </div>
+                <div class="items">
+                    9asdsa
+                </div>
+                <div class="items">
+                    10asdsa
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <a href="javascript:;" class="pre defau">上一页</a>
+        <ol class="page-number"></ol>
+        <a href="javascript:;" class="next">下一页</a>
+        <p class="all-page">供<span>3</span>页 到<input type="text" class="text" /> 页 </p>
+        <input type="button" class="page-btn" value="确认" />
+    </div>
+    <script src="http://visible.sinaapp.com/Plug-in/page.js"></script>
+    <script>
+    $(function() {
+        $(".box").Page();
+    })
+    </script>
+</body>
+</html>

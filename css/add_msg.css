@@ -116,8 +116,20 @@ div{
 -webkit-box-shadow:3px 2px 3px #888888;
 
 }
+.item a{
+	background-color: #ffffff;
+	border: 1px solid #888888;
+	color: #444444;
+}
+.item .draft{
+	background-color: #FE6400;
+	color: #ffffff;
+	border: 0;
+}
 .item .img:hover,.item .file:hover,.item a:hover{
 	background-color: #FE9400;
+	color: #ffffff;
+	border: 0;
 }
 .img input,.file input{
 	position: absolute;
@@ -140,14 +152,14 @@ div{
 	color: red;
 	margin-right: 5px;
 }
-.editor-container{
+.editor_container{
 	width: 900px;
 	margin: 0 auto;
 	position: relative;
 	margin-top: 10px;
 }
-#editor-trigger{
-	height: 400px;
+#editor_trigger{
+	height: 600px;
 	width: 100%;
 /*	border: #FE6400 1px solid;
 	font-size: 18px;*/
@@ -156,4 +168,17 @@ div{
 	display: inline-block;
 	margin-top: 20px;
 	margin-left: 20px;
+}
+.tips{
+	width: 22px;
+	height: 22px;
+	font-size: 12px;
+}
+.onError{
+    background:#FFE0E9 url(../img/reg3.gif) no-repeat 0 center;
+	padding-left:25px;
+}
+.onSuccess{
+    background:#E9FBEB url(../img/reg4.gif) no-repeat 0 center;
+	padding-left:25px;
 }

@@ -4,7 +4,8 @@
 	height: 40px;
 }
 .tip{
-	width: 170px;
+	/*width: 170px;*/
+	width: 25%;
 	height: 30px;
 	float: left;
 	margin-left: 20px;
@@ -21,7 +22,7 @@
 	margin-left: 40px;
 	margin-top: 10px;
 	line-height: 35px;
-	width: 150px;
+	width: 23%;
 	text-align: center;
 	float: left;
 	background-color: #FF8A3C;
@@ -32,9 +33,9 @@
 /*banner照片*/
 .banner{
 	clear: both;
+	width: 100%;
 	padding-top: 20px;
 	min-height: 300px;
-	/*position: relative;*/
 }
 .banner ul li{
 	width: 245px;
@@ -43,6 +44,14 @@
 	float: left;
 	/*暂时调试用*/
 	/*border: #888888 solid 2px;*/
+}
+.item{
+	width: 245px;
+	height: 180px;
+	text-align: center;
+	cursor:pointer;
+	float: left;
+	/*background:#ccc;*/
 }
 .item .img{
 	width: 200px;
@@ -56,6 +65,7 @@
 .item img{
 	width: 200px;
 	height: 100px;
+	text-align:center
 }
 /*以上*/
 .item p,.add_banner p{

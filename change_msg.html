@@ -2,14 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Quanta（量子）信息服务中心后台管理系统--新增动态页</title>
+	<title>Quanta（量子）信息服务中心后台管理系统--修改动态页</title>
 	<link rel="stylesheet" type="text/css" href="css/add_msg.css">
 	<link rel="stylesheet" type="text/css" href="css/wangEditor.min.css">
-    <link rel="stylesheet" type="text/css" href="css/dark.css">
-    <script type="text/javascript" src="js/highlight.pack.js"></script>
-	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-    
-    <script type="text/javascript" src="js/ajaxfileupload.js"></script>
+	<script type="text/javascript" src="js/editor/nicEdit.js"></script>
 </head>
 <body>
 	<div id="container">
@@ -18,20 +14,19 @@
 			<a href="index.html">后台管理&nbsp;</a>
 			<a href="index.html">|&nbsp;动态管理</a>
 		</div>
-		<a href="#" class="back" onclick="back=function(){window.history.back(-1);}">返回</a>
+		<a href="#" class="back">返回</a>
 		<div class="space" style="height:20px;"></div>
 		<div id="content">
 			<form method="post" action="">
 				<div class="item">
 				    <p>标题：</p>
-				    <input type="text" class="title" id="title">
+				    <input type="text" class="title">
 			    </div>
 			    <div class="item">
-                    <!-- 上传动态的封面：不用预览 -->
 				    <p>上传图片：</p>
 				    <div class="img">
 					    本地上传
-					    <input type="file" class="upload_img" id="upload_img">
+					    <input type="file" class="upload_img">
 				    </div>
 
 				    <div class="point">
@@ -50,15 +45,14 @@
                  <div class="item">
 				    <div class="file">
 					    上传文档
-                        <!-- 文件上传中的name值可能会需要改变 -->
-					    <input type="file" class="uploadFile" name="uploadFile" id="uploadFile">
+					    <input type="file" class="upload_file">
 				    </div>
 			    </div>
 
                 <div class="item">
                     <!-- 预览打开一个新的网页 -->
-                    <a href="#" class="preview">预览</a>
-                    <a href="#" class="draft">保存到草稿箱</a>
+                    <a href="pre_msg.html" class="preview" target_>预览</a>
+                    <!-- <a href="#" class="draft">保存到草稿箱</a> -->
                     <a href="#" class="issue">保存并发布</a>
                     <a href="#" class="reset">取消</a>
                 </div>
@@ -71,7 +65,7 @@
 		</div>
 	</div>
 
-	<script type="text/javascript" src="js/add_msg.js"></script>
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="js/wangEditor.js"></script>
 	<script type="text/javascript">
         // 阻止输出log
@@ -79,13 +73,12 @@
 
 	    var editor = new wangEditor('editor_trigger');
 
-        // 上传图片:需要配置服务器端的地址
+        // 上传图片
         editor.config.uploadImgUrl = '/upload';
         editor.config.uploadParams = {
             // token1: 'abcde',
             // token2: '12345'
         };
-        // 如果需要在上传图片时候自定义设置request的headers，可通过editor.config.uploadHeaders来配置
         editor.config.uploadHeaders = {
             // 'Accept' : 'text/x-json'
         }
@@ -99,7 +92,7 @@
         editor.config.emotions = {
             'default': {
                 title: '默认',
-                data: './emotions.data'    //默认图片读不出来，可能是路径的问题。或者不要这个菜单？
+                data: './emotions.data'
             },
             'weibo': {
                 title: '微博表情',
@@ -149,24 +142,20 @@
         //     'fullscreen'
         // ];
         // 只排除某几个菜单（兼容IE低版本，不支持ES5的浏览器），支持ES5的浏览器可直接用 [].map 方法
-        editor.config.menus = $.map(wangEditor.config.menus, function(item, key) {
-	        if (item === 'location') {
-                return null;
-            }
-            if (item === 'video') {
-                return null;
-            }
-            if (item === 'emotion') {
-                return null;
-            }
-            return item;
-        });
+        // editor.config.menus = $.map(wangEditor.config.menus, function(item, key) {
+	    //     if (item === 'location') {
+        //         return null;
+        //     }
+        //     if (item === 'fullscreen') {
+        //         return null;
+        //     }
+        //     return item;
+        // });
 
         // onchange 事件
-        editor.onchange = function () {
-            // 获取格式化后的纯文本
-        var formatText = editor.$txt.formatText();
-        };
+        // editor.onchange = function () {
+        //     console.log(this.$txt.html());
+        // };
 
         // 取消过滤js
         // editor.config.jsFilter = false;
@@ -190,17 +179,6 @@
         //     selected: '<button style="font-size:20px; margin-top:5px;"><i>I</i></button>'
         // };
         editor.create();
-
-    //      $('#btn1').click(function () {
-    //     // 获取编辑器区域完整html代码
-    //     var html = editor.$txt.html();
-
-    //     // 获取编辑器纯文本内容
-    //     var text = editor.$txt.text();
-
-    //     // 获取格式化后的纯文本
-    //     var formatText = editor.$txt.formatText();
-    // });
     </script>
 </body>
 </html>

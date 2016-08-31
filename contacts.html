@@ -5,9 +5,19 @@
 	<title>Quanta（量子）信息服务中心后台管理系统--联系人管理页</title>
 	<link rel="stylesheet" type="text/css" href="css/base.css">
 	<link rel="stylesheet" type="text/css" href="css/contacts.css">
-	<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/menu.js"></script>
-	<script type="text/javascript" src="js/verify_contacts.js"></script>
+	<script type="text/javascript" src="js/contacts.js"></script>
+	<script type="text/javascript">
+	// $(function(){
+	// 	//如果是必填的，则加红星标识.
+	// 	console.log("此处执行");
+	// 	$("form :input.required").each(function(){
+	// 		var $required = $("<strong class='high'> *</strong>"); //创建元素
+	// 		$(this).parent().append($required); //然后将它追加到文档中
+	// 	});
+	// });
+	</script>
 </head>
 <body>
 	<div id="container">
@@ -51,28 +61,28 @@
 			<div id="main">
 				<div class="sub">
 					<a href="index.html">后台管理&nbsp;</a>
-					<a href="index.html">|&nbsp;联系人管理</a>
+					<a href="contacts.html">|&nbsp;联系人管理</a>
 				</div>
 
 
 				<!-- 表单提交地址 -->
-				<form method="post" action="">
+				<form method="post" action="" id="formMsg">
 					<div class="item">
 					<label for="username">联系人姓名：</label>
-					<input type="text" calss="username required" id="username">
+					<input type="text" calss="required" id="username">
 				</div>
 
 				<div class="item">
 					<label for="qq_num">QQ：</label>
-					<input type="text" calss="qq_num required" id="qq_num">
+					<input type="text" calss="required" id="qq_num">
 				</div>
 				<div class="item">
 					<label for="email">Mail：</label>
-					<input type="text" calss="email required" id="email">
+					<input type="text" calss="required" id="email">
 				</div>
 				<div class="item">
 					<label for="tel_num">TEL：</label>
-					<input type="text" calss="tel_num required" id="tel_num">
+					<input type="text" calss="required" id="tel_num">
 				</div>
 				<div class="item">
 					<label for="short_num">短号（可不填）：</label>

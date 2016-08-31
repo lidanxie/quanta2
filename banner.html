@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/banner2.css">
 	<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
 	<script type="text/javascript" src="js/menu.js"></script>
-	<script type="text/javascript" src="js/checkForm.js"></script>
+	<script type="text/javascript" src="js/banner.js"></script>
 </head>
 <body>
 	<div id="container">
@@ -61,23 +61,23 @@
 				<form method="post" action="">   
 					<div class="item"><p>标题：</p>
 						<input type="text" class="til required">
-						<span class="tips">不能为空</span>
+						<!-- <span class="tips onSuccess">不能为空</span> -->
 					</div>
 					<div class="item">
 						<p>上传照片：</p>
 						<a href="javascript:;" class="banner_upload">本地上传
-							<input type="file">
+							<input type="file" id="upload">
 						</a>
 					</div>
 					<div class="item">
 						<p>添加链接：</p>
 						<input type="text" class="url required">
-						<span class="tips">不能为空</span>
+						<!-- <span class="tips onSuccess">不能为空</span> -->
 					</div>
 					<div class="space" style="height:30px"></div>
 					<div class="item">
 						<p>备注：</p>
-						<textarea name="text" onpropertychange="if(this.scrollHeight>80) this.style.posHeight=this.scrollHeight+5"></textarea>
+						<textarea name="text"  class="textarea"onpropertychange="if(this.scrollHeight>80) this.style.posHeight=this.scrollHeight+5"></textarea>
 					</div>
 					<div class="item">
 						<input type="submit" value="保存" class="save">
