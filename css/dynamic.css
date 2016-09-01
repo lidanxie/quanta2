@@ -275,3 +275,10 @@
 .tiH,.even{
 	background-color: #fff38f;
 }
+/*加载出错提示*/
+.error{
+	font-size: 24px;
+	color: red;
+	text-align: center;
+	margin-top: 20px;
+}
