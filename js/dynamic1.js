@@ -69,38 +69,38 @@ $(document).ready(function(){
 // end 3
 
 //4. 点击删除的时候
-// $(document).ready(function(){
-	// $(".delete").click(function(){
-	// 	var $r=confirm("确认要删除吗？");
-	// 	 if($r==true){
-	// 	     // 需要将要删除的数据传到数据库中
-	// 	    $.post("后台删除的处理文件",{
-	// 	         time: $(".time").val(),
-	// 	         msgTil: $(".msg_til").val(),
+$(document).ready(function(){
+	$(".delete").click(function(){
+		var $r=confirm("确认要删除吗？");
+		 if($r==true){
+		     // 需要将要删除的数据传到数据库中
+		    $.post("后台删除的处理文件",{
+		         time: $(".time").val(),
+		         msgTil: $(".msg_til").val(),
 
-	// 	    });
-	// 	    $(this).parent().remove();
-	// 	  }else{
- //          return false;
-	// 	  }
- //    })
-// });
+		    });
+		    $(this).parent().remove();
+		  }else{
+          return false;
+		  }
+    })
+});
 
 // // 5.从数据库中获取全部的信息.显示出来
 $(document).ready(function(){
-// 	$.ajax({
-// 		type:"POST",
-// 		url:""; //后台的文件
-// 		dataType:"json",   //json文件类型
-// 		success:function(data){
-// 			$(".all_msg").empty();
-// 			var $html='';
-// 	        $.each(_jsonDta,function(itemIndex,item){
-// 		        $html+='<div class="item"><div class="time">'+item['time']+'</div><a href=\"'+item['msgUrl']+'\"class="msg_til"  target="_blank">'+item['msgTil']+'</a><a href=\"'+item['msgUrl']+'\" class="see"  target="_blank">查看</a><a href="javascript" class="delete">删除</a></div>'
-// 	        });
-// 	        $("#all_msg").append($html);
-// 		}
-// 	})
+	$.ajax({
+		type:"POST",
+		url:""; //后台的文件
+		dataType:"json",   //json文件类型
+		success:function(data){
+			$(".all_msg").empty();
+			var $html='';
+	        $.each(_jsonDta,function(itemIndex,item){
+		        $html+='<div class="item"><div class="time">'+item['time']+'</div><a href=\"'+item['msgUrl']+'\"class="msg_til"  target="_blank">'+item['msgTil']+'</a><a href=\"'+item['msgUrl']+'\" class="see"  target="_blank">查看</a><a href="javascript" class="delete">删除</a></div>'
+	        });
+	        $("#all_msg").append($html);
+		}
+	})
 
 
 // 测试读取数据
@@ -236,46 +236,46 @@ var _jsonData=[{
 
 // 4 搜索框中自动补全
    	$("#search_input").focus(function(){
-		// $.ajax({
-		// 	type:"POST",
-		// 	url:"后台处理文件",
-		// 	// 此处可能有错
-		// 	dataType:"json",
-		// 	success:function(data){
-		// 		$("search_input").bigAutocomplete({
-		// 			width:640,
-		// 			data:"后台传回来的json文件",
-		// 			callback:function(data){
+		$.ajax({
+			type:"POST",
+			url:"后台处理文件",
+			// 此处可能有错
+			dataType:"json",
+			success:function(data){
+				$("search_input").bigAutocomplete({
+					width:640,
+					data:"后台传回来的json文件",
+					callback:function(data){
 
-		// 			}
-		// 		})
-		// 	}
-		// })
+					}
+				})
+			}
+		})
 	});
 
 	// 此处有个问题：如何将ajax过来的json数组写进到下面data中去呢？
 
-// $("#search_input").bigAutocomplete({width:504,data:[{title:"quanta招新"},{title:"中国移动网上营业厅"},{title:"中国银行"},{title:"中国移动"},{title:"中国好声音第三期"},{title:"中国好声音 第一期"},{title:"中国电信网上营业厅"},{title:"中国工商银行"},{title:"中国好声音第二期"},{title:"中国地图"}],
-// 	callback:function(data){
-// 	}});
+$("#search_input").bigAutocomplete({width:504,data:[{title:"quanta招新"},{title:"中国移动网上营业厅"},{title:"中国银行"},{title:"中国移动"},{title:"中国好声音第三期"},{title:"中国好声音 第一期"},{title:"中国电信网上营业厅"},{title:"中国工商银行"},{title:"中国好声音第二期"},{title:"中国地图"}],
+	callback:function(data){
+	}});
 
 // 需要将搜索的信息展示出来
 	$("#search_btn").click(function(){
 		// 获取到搜索框中的value然后通过ajax查询
 		var $inputVal=$("#search_input").val();
-		// $.ajax({
-		// 	type:"POST",
-		// 	url："后台处理查询的文件",
-		// 	dataType:"json",
-		// 	success:function(data){
-		// 		$(".all_msg").empty();
-		// 	    var $html='';
-	 //            $.each(_jsonDta,function(itemIndex,item){
-		//             $html+='<div class="item"><div class="time">'+item['time']+'</div><a href=\"'+item['msgUrl']+'\"class="msg_til"  target="_blank">'+item['msgTil']+'</a><a href=\"'+item['msgUrl']+'\" class="see"  target="_blank">查看</a><a href="javascript" class="delete">删除</a></div>'
-	 //            });
-	 //            $("#all_msg").append($html);
-		// 	}
-		// })
+		$.ajax({
+			type:"POST",
+			url："后台处理查询的文件",
+			dataType:"json",
+			success:function(data){
+				$(".all_msg").empty();
+			    var $html='';
+	            $.each(_jsonDta,function(itemIndex,item){
+		            $html+='<div class="item"><div class="time">'+item['time']+'</div><a href=\"'+item['msgUrl']+'\"class="msg_til"  target="_blank">'+item['msgTil']+'</a><a href=\"'+item['msgUrl']+'\" class="see"  target="_blank">查看</a><a href="javascript" class="delete">删除</a></div>'
+	            });
+	            $("#all_msg").append($html);
+			}
+		})
 
 	});
 
